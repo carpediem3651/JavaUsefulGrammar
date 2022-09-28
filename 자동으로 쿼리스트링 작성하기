@@ -1,3 +1,9 @@
+public class SearchCondition {
+    private Integer page = 1;
+    private Integer pageSize = 10;
+    private String keyword = "";
+    private String option ="";
+
     public String getQueryString(Integer page) {
         //        ?page=1&pageSize=10&option=T&keyword="title" 쿼리 스트링을 자동으로 만들어주는 메서드.
         return UriComponentsBuilder.newInstance()
@@ -7,3 +13,4 @@
                 .queryParam("keyword", keyword)
                 .build().toString();
     }
+}
